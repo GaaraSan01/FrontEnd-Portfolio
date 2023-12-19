@@ -1,44 +1,70 @@
 'use client'
 import { useState } from "react"
+import { z } from "zod";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
 
+
+const schema = z.object({
+    name: z.string()
+    .min(3, 'Por favor, informe um nome válido!'),
+
+    tel: z.string()
+    .min(11, 'Por favor, digite um telefone válido!'),
+
+    email: z.string()
+    .email('Formato de email inválido!'),
+
+    assunto: z.string()
+})
+
+type FormProps = z.infer<typeof schema>
 
 export const Formulario = () => {
+    const {
+        register, 
+        handleSubmit, 
+        formState:{errors, isSubmitting},
+        reset,
+        getValues
+    } = useForm<FormProps>({
+        mode:'onBlur',
+        resolver: zodResolver(schema)
+    })
     const [onHover, setOnHover] = useState(false)
 
     return (
         <form className="flex flex-col gap-y-8 max-w-5xl w-full ">
             <div className="flex flex-col gap-6 md:flex-row">
                 <input 
-                    type="text" 
-                    name="Nome" 
+                    type="text"  
                     id="nome" 
                     className="basic_input md:w-1/2"
                     placeholder="Digite seu nome..."
+                    {...register('name')}
                 />
                 <input 
                     type="tel"
-                    name="telefone" 
                     id="telefone" 
                     className="basic_input md:w-1/2"
                     placeholder="Digite seu telefone/whatsapp..."
+                    {...register('tel')}
                 />
             </div>
             <div>
                 <input 
                     type="email" 
-                    name="email" 
                     id="email" 
                     className="basic_input w-full"
                     placeholder="Digite seu e-mail..."
+                    {...register('email')}
                 />
             </div>
             <div>
                 <textarea 
                     name="Assunto" 
                     id="assunto" 
-                    cols="30" 
-                    rows="10" 
-                    className="basic_input w-full"
+                    className="basic_input w-full min-h-[300px]"
                     placeholder="Digite o assunto..."
                 ></textarea>
             </div>
