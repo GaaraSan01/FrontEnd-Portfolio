@@ -9,11 +9,13 @@ export const metadata: Metadata = {
   description: 'Desenvolvedor Full-Stack',
 }
 
+type LayoutProps = { 
+  children: React.ReactNode 
+}
+
 export default function RootLayout({
   children,
-}: {
-  children: React.ReactNode
-}) {
+}: LayoutProps) {
   return (
     <html lang="pt-br" className='scroll-smooth'>
       <body className={inter.className}>{children}</body>
