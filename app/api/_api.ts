@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const SendMails = axios.create({
-    baseURL: '/'
+    baseURL: '/api/sendmail'
 })
 
 export const ProjetosApi = axios.create({

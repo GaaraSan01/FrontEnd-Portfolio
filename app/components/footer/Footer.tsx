@@ -4,7 +4,7 @@ export default function Footer (){
     return (
         <footer className="bg-blue flex flex-col gap-8 items-center
         justify-end h-40 pb-3 px-5">
-            <Link href={'/'} className="fixed bottom-8 right-8">
+            <Link href={'#banner'} className="fixed bottom-8 right-8">
                 <svg width="40" height="40" viewBox="0 0 70 70" className=" stroke-blue fill-white hover:fill-blue hover:stroke-white transition-all duration-200 ease-in" xmlns="http://www.w3.org/2000/svg">
                     <g id="up">
                     <path id="Rectangle 7" d="M1 2C1 1.44772 1.44772 1 2 1H68C68.5523 1 69 1.44772 69 2V68C69 68.5523 68.5523 69 68 69H2C1.44772 69 1 68.5523 1 68V2Z" stroke="#0B132B" strokeWidth="2"/>

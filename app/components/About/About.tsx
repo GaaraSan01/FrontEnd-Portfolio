@@ -15,8 +15,8 @@ export default function About(){
                         Olá! Meu nome é <strong>Vinícius Henrique</strong>, sou um <strong>desenvolvedor Full-Stack</strong> sediado em <strong>São José dos Pinhais</strong>, PR, na região metropolitana de Curitiba. Minha jornada no mundo da programação começou no <strong>back-end</strong>, onde mergulhei profundamente no universo do Python. Com o tempo, expandi meus horizontes e, atualmente, estou imerso no estudo de <strong>front-end</strong>.
                     </p>
                     <div className="flex flex-col gap-5 lg:flex-row">
-                        <ButtonPadrao href="#" conteudo="Ver tecnologias" arrow={false}/>
-                        <ButtonPadrao href="#" conteudo="Entrar em contato" arrow={true}/>
+                        <ButtonPadrao href="#principais-tecnologias" conteudo="Ver tecnologias" arrow={false}/>
+                        <ButtonPadrao href="#contato" conteudo="Entrar em contato" arrow={true}/>
                     </div>
                 </div>
                 <div className=" flex justify-end pb-5 md:w-1/2">
