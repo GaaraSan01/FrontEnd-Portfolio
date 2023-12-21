@@ -1,5 +1,4 @@
 import ButtonPadrao from "../Button/Button"
-import avatar from '@/public/avatar.png'
 import Image from "next/image"
 
 export default function About(){
@@ -20,7 +19,7 @@ export default function About(){
                     </div>
                 </div>
                 <div className=" flex justify-end pb-5 md:w-1/2">
-                    <Image src={avatar} alt="Foto de Vinícius Henrique com moudura" quality={100}/>
+                    <Image src={'/avatar.png'} width={569} height={568} alt="Foto de Vinícius Henrique com moudura" quality={100}/>
                 </div>
             </div>
         </section>

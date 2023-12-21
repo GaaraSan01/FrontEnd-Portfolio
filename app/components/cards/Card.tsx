@@ -4,6 +4,7 @@ import Link from "next/link"
 import { useState } from "react"
 import TypeCardProjects from "@/app/@types/TypeCardProjects"
 import img_card from "@/public/img_Cadr.png";
+import { Arrow } from "../svgs"
 
 
 export const Card = ({img, title, copy, link, categoria}: TypeCardProjects) => {
@@ -32,9 +33,7 @@ export const Card = ({img, title, copy, link, categoria}: TypeCardProjects) => {
                     target="_blank"
                 >
                     Ver projeto
-                    <svg width="31" height="15" className={onHover ? 'fill-white' : 'fill-blue'} viewBox="0 0 31 15"  xmlns="http://www.w3.org/2000/svg">
-                            <path id="Arrow 1" d="M30.7071 8.20711C31.0976 7.81658 31.0976 7.18342 30.7071 6.79289L24.3431 0.428931C23.9526 0.0384069 23.3195 0.0384069 22.9289 0.428931C22.5384 0.819456 22.5384 1.45262 22.9289 1.84315L28.5858 7.5L22.9289 13.1569C22.5384 13.5474 22.5384 14.1805 22.9289 14.5711C23.3195 14.9616 23.9526 14.9616 24.3431 14.5711L30.7071 8.20711ZM0 8.5H30V6.5H0L0 8.5Z"/>
-                    </svg>
+                    <Arrow className={onHover ? 'fill-white' : 'fill-blue'} /> 
                 </Link>
             </div>
         </>
