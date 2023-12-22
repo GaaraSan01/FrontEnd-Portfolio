@@ -2,8 +2,6 @@
 import Image from "next/image"
 import Link from "next/link"
 import logo from "@/public/logo.png"
-import menu from "@/public/menu.svg";
-import closeMenu from "@/public/close.svg"
 import { ListMenu } from "./utils/utilsMenu";
 import { useState } from "react";
 import { GitHub, Linkedin } from "../svgs";
@@ -35,7 +33,7 @@ export default function Header() {
                                 () => setMenuResponsive(!menuResponsive)
                             }
                         >
-                            <Image src={menu} alt="Menu" />
+                            <Image src={'/menu.svg'} width={32} height={32} alt="Menu" />
                         </button>
 
                     </nav>
@@ -46,7 +44,7 @@ export default function Header() {
                     <button
                         onClick={() => setMenuResponsive(!menuResponsive)}
                     >
-                        <Image src={closeMenu} alt="Fechar menu" />
+                        <Image src={'/close.svg'} width={32} height={32} alt="Fechar menu" />
                     </button>
                 </div>
                 <ul className="text-white text-center font-semibold flex flex-col gap-5">
