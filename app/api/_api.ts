@@ -5,5 +5,6 @@ export const SendMails = axios.create({
 })
 
 export const ProjetosApi = axios.create({
-    baseURL: 'http://localhost:8000'
+    //baseURL: 'http://localhost:8000'
+    baseURL: 'https://portfolio-backend-a0ml.onrender.com'
 })
