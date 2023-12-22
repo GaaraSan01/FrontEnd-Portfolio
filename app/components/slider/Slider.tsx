@@ -14,7 +14,6 @@ import 'swiper/css/scrollbar';
 
 export const Slider = () => {
     const [loading, setLoading] = useState(true)
-    const [slidePerView, setSliderPerView] = useState(3)
     const [projetos, setProjetos] = useState<ApiResponse>([])
 
     useEffect(() => {
@@ -30,33 +29,32 @@ export const Slider = () => {
                 return []
             }
         }
-
-        const handleResize = () => {
-            if(window.innerWidth < 720){
-                setSliderPerView(1)
-            }else if(window.innerWidth < 1180){
-                setSliderPerView(2)
-            }
-        }
         getProjets().then(data => setProjetos(data))
-        window.addEventListener('resize', handleResize)
-
-        return () => {
-            window.removeEventListener('resize', handleResize)
-        }
     }, [])
     
     return (
         <div className="max-w-7xl mx-auto px-6">
             <Swiper
                 modules={[Pagination]}
-                spaceBetween={30}
-                slidesPerView={slidePerView}
+                slidesPerView={3}
                 loop={true}
                 grabCursor={true}
                 pagination={{ 
                     clickable: true,
                     dynamicBullets: true,
+                }}
+                breakpoints={{
+                    320: {
+                        slidesPerView: 1,
+                    },
+                    769: {
+                        slidesPerView: 2,
+                        spaceBetween: 20
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 20
+                    }
                 }}
             >
             {
