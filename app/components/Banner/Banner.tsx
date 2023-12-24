@@ -1,4 +1,5 @@
-import ButtonPadrao from "../Button/Button"
+import ButtonPadrao from "../Button/Button";
+import ButtonCurriculum from "../ButtonCurriculum/ButtonCurriculum";
 
 export default function Banner() {
     return (
@@ -9,7 +10,7 @@ export default function Banner() {
                     Sou um desenvolvedor <span className="" id="gradiente__destaque">Full-Stack</span>
                 </h1>
                 <div className="flex flex-col gap-3 pt-8 md:flex-row md:justify-center md:pt-20">
-                    <ButtonPadrao href="#" conteudo="Baixar Curriculum" arrow={false}/>
+                    <ButtonCurriculum curriculumUrl="curriculum.pdf" />
                     <ButtonPadrao href="#sobre-mim" conteudo="Quero saber mais!" arrow={true}/>
                 </div>
             </div>
