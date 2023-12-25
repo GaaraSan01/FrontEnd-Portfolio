@@ -6,7 +6,7 @@ export default function Footer (){
         <footer className="bg-blue flex flex-col gap-8 items-center
         justify-end h-40 pb-3 px-5">
             <Link href={'#banner'} className="fixed bottom-8 right-8">
-                <ArrowUp className=" stroke-blue fill-white hover:fill-blue hover:stroke-white transition-all duration-200 ease-in"/>
+                <ArrowUp className=" fill-white stroke-blue hover:stroke-white hover:fill-blue  transition-all duration-200 ease-in"/>
             </Link>
             <div className="flex gap-4">
                 <Link href={'https://www.instagram.com/vinih.io/'} target="_blank">
