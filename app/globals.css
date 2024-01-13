@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: Cascadia Code;
+  src: url(./fonts/CascadiaCode.woff2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+#gradiente__destaque {
+  background: linear-gradient(90deg, #000 67.14%, #3A506B 76.77%, #0B132B 85.56%, #000 94.35%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@layer components {
+  .basic_title{
+    @apply text-2xl font-serif text-center font-semibold text-blue pb-14 lg:text-4xl;
+  }
+
+  .basic_list {
+    @apply pb-5 text-sm font-semibold lg:text-xl
+  }
+
+  .basic_bottom{
+    @apply py-2.5 px-4 font-serif text-blue border-blue border-2 flex items-center justify-between gap-6 font-semibold rounded-sm hover:bg-blue hover:text-white transition duration-300 text-sm lg:text-base;
+  }
+
+  .basic_input {
+    @apply border-2 border-blue outline-none rounded-sm placeholder:text-blue placeholder:font-serif font-serif py-5 px-6 focus:bg-green-secundary hover:shadow-blue-secundary hover:shadow-md transition-all ease-in-out duration-300 text-sm;
+  }
+
+  .basic_icon__tecnologia {
+    @apply transition-transform duration-300 hover:scale-110;
+  }
+
+  .basic_itemListMenu {
+    @apply hover:text-green-secundary transition duration-300;
+  }
+
+  .menu__responsive {
+    @apply fixed top-0 bg-blue z-50 w-screen h-0 transition-all duration-300 ease-in overflow-hidden flex flex-col items-center justify-between;
+  }
+
+  .links__centralizador {
+    @apply fill-blue transition-all duration-300 hover:fill-green-secundary
+  }
+}
+
+
+#list_habilidades li::before {
+  content: url('../public/arrow_right.svg');
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+}
+
+form input:focus, textarea:focus {
+  box-shadow: 0px 4px 8.3px 0px rgba(11, 19, 43, 0.75) inset;
+}
