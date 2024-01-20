@@ -13,7 +13,7 @@ export default function Header() {
         <>
             <header className="bg-blue py-6 fixed w-screen z-40">
                 <div className="max-w-7xl mx-auto lg:px-7 flex justify-between sm:px-4">
-                    <Link href={'#'}>
+                    <Link href={'/'}>
                         <Image src={logo} alt="Vinícius H." />
                     </Link>
                     <nav className="w-1/2 flex lg:justify-around lg:items-center sm:justify-end">
@@ -50,7 +50,7 @@ export default function Header() {
                 <ul className="text-white text-center font-semibold flex flex-col gap-5">
                     <li>
                         <Link 
-                           href={'#sobre-mim'} className="basic_itemListMenu"
+                           href={'/#sobre-mim'} className="basic_itemListMenu"
                            onClick={() => setMenuResponsive(!menuResponsive)}
                         >
                             Sobre
@@ -58,7 +58,7 @@ export default function Header() {
                     </li>
                     <li>
                         <Link 
-                        href={'#principais-tecnologias'} 
+                        href={'/#principais-tecnologias'} 
                         className="basic_itemListMenu"
                         onClick={() => setMenuResponsive(!menuResponsive)}
                         >
@@ -67,7 +67,7 @@ export default function Header() {
                     </li>
                     <li>
                         <Link 
-                        href={'#meus-principais-projetos'} 
+                        href={'/#meus-principais-projetos'} 
                         className="basic_itemListMenu"
                         onClick={() => setMenuResponsive(!menuResponsive)}
                         >
@@ -76,11 +76,20 @@ export default function Header() {
                     </li>
                     <li>
                         <Link 
-                        href={'#contato'} 
+                        href={'/#contato'} 
                         className="basic_itemListMenu"
                         onClick={() => setMenuResponsive(!menuResponsive)}
                         >
                             Contato
+                        </Link>
+                    </li>
+                    <li>
+                        <Link 
+                        href={'/blog'} 
+                        className="basic_itemListMenu"
+                        onClick={() => setMenuResponsive(!menuResponsive)}
+                        >
+                            Blog
                         </Link>
                     </li>
                 </ul>
