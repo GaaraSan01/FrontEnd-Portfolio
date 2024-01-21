@@ -29,7 +29,7 @@ export default function Links() {
                 <div className="w-full py-6 flex flex-col gap-4 px-4">
                     <ButtonPadrao href="/" conteudo="Portfólio" arrow/>
                     <ButtonPadrao href="https://wa.me/5541987478023" blank conteudo="Solicitar orçamento"/>
-                    <ButtonPadrao href="#" conteudo="Blog - Artigos sobre tecnologia"/>
+                    <ButtonPadrao href="/blog" conteudo="Blog - Artigos sobre tecnologia"/>
                 </div>
             </div>
         </main>
