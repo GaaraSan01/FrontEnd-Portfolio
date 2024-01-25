@@ -22,7 +22,9 @@ export default async function PagePost({ params }: {params: {slug: string}}) {
                             h3: ({node, ...props}) => <h3 className="text-blue text-2xl font-serif font-bold py-4" {...props} />,
                             p: ({node, ...props}) => <p className="py-2 text-justify" {...props} />,
                             img: ({node, ...props}) => <img className="max-h-96 mx-auto py-4" {...props} />,
-                            code: ({node, ...props}) => <CodeBlock {...props}/>
+                            code: ({node, ...props}) => <CodeBlock {...props}/>,
+                            ul: ({node, ...props}) => <ul className="list-disc pl-4" {...props}/>,
+                            a: ({node, ...props}) => <a className="text-blue-secundary underline" {...props} />
                         }}
                     >
                         {post.content}

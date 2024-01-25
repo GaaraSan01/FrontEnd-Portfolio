@@ -11,6 +11,6 @@ export default function CodeBlock({ children }: { children?: ReactNode }){
     },[])
 
     return (
-        <code className="language-python">{children}</code>
+        <code className="language-python bg-slate-900 text-white">{children}</code>
     )
 }
