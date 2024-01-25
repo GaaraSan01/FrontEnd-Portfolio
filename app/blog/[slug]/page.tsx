@@ -11,7 +11,7 @@ export default async function PagePost({ params }: {params: {slug: string}}) {
     return(
         <>
             <Header />
-            <main className="min-h-screen pt-20 pb-14 px-4">
+            <main className="min-h-screen sm:px-2 pt-20 pb-14 md:px-4">
                 <div className="container mx-auto">
                     <div className="py-12 border-y-2 border-blue">
                         <h1 className="font-bold text-4xl text-blue font-serif text-center">{post.title}</h1>
