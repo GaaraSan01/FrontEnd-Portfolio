@@ -1,5 +1,6 @@
 import { getPost } from "@/app/api/notion";
-import ReactMarkdown from "react-markdown";;
+import ReactMarkdown from "react-markdown";
+import CodeBlock from "@/app/components/CodeBlock/CodeBlock";
 import 'highlight.js/styles/default.css';
 import Header from "@/app/components/Header/Header";
 import Footer from "@/app/components/footer/Footer";
@@ -22,6 +23,7 @@ export default async function PagePost({ params }: {params: {slug: string}}) {
                             h3: ({node, ...props}) => <h3 className="text-blue text-2xl font-serif font-bold py-4" {...props} />,
                             p: ({node, ...props}) => <p className="py-2 text-justify" {...props} />,
                             img: ({node, ...props}) => <img className="max-h-96 mx-auto py-4" {...props} />,
+                            code: ({node, ...props}) => <CodeBlock {...props}/>
                         }}
                     >
                         {post.content}
