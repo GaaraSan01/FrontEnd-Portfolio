@@ -1,7 +1,6 @@
 import { getPost } from "@/app/api/notion";
 import ReactMarkdown from "react-markdown";
 import CodeBlock from "@/app/components/CodeBlock/CodeBlock";
-import 'highlight.js/styles/default.css';
 import Header from "@/app/components/Header/Header";
 import Footer from "@/app/components/footer/Footer";
 

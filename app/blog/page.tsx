@@ -1,7 +1,13 @@
+import type { Metadata } from "next";
 import { getPosts } from "../api/notion";
 import Header from "../components/Header/Header";
 import Footer from "../components/footer/Footer";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+    title: 'Blog | Vinícius H.',
+    description: 'Blog pessoal de Vinicius H. que fala sobre a área de Desenvolvimento de Software.',
+  }
 
 export default async function Blog() {
     const posts = await getPosts()

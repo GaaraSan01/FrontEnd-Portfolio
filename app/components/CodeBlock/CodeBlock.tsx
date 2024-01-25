@@ -6,12 +6,11 @@ import 'highlight.js/styles/default.css';
 
 
 export default function CodeBlock({ children }: { children?: ReactNode }){
-
-    useEffect(() => {
+    useEffect(()=>{
         hljs.highlightAll()
-    }, [])
+    },[])
 
     return (
-        <code>{children}</code>
+        <code className="language-python">{children}</code>
     )
 }

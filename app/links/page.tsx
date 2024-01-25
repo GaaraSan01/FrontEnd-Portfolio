@@ -1,7 +1,12 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Linkedin, GitHub, Instagram } from "@/app/components/svgs";
 import ButtonPadrao from "../components/Button/Button";
 
+export const metadata: Metadata = {
+    title: 'Links | Vinícius H.',
+    description: 'Meus principais links.',
+}
 
 export default function Links() {
     return (
