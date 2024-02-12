@@ -24,7 +24,7 @@ export default async function PagePost({ params }: {params: {slug: string}}) {
                             img: ({node, ...props}) => <img className="max-h-96 mx-auto py-4" {...props} />,
                             code: ({node, ...props}) => <CodeBlock {...props}/>,
                             ul: ({node, ...props}) => <ul className="list-disc pl-4" {...props}/>,
-                            a: ({node, ...props}) => <a className="text-blue-secundary underline" {...props} />
+                            a: ({node, ...props}) => <a className="text-blue-secundary underline" target="_blank"{...props} />
                         }}
                     >
                         {post.content}
